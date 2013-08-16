@@ -1,15 +1,6 @@
-/*global require,exports */
-/**
-    module:"matte/ui/button.reel"
-*/
-var NativeButton = require("native/ui/button.reel").Button;
+var AbstractButton = require("montage/ui/base/abstract-button").AbstractButton;
 
-/**
- * Montage Button
- @class module:"matte/ui/button.reel".Button
- @extends module:"native/ui/button.reel".Button
-*/
-exports.Button = NativeButton.specialize(/** @lends module:"matte/ui/button.reel".Button# */ {
+exports.Button = AbstractButton.specialize({
 
     hasTemplate: {value: true},
 
