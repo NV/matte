@@ -36,9 +36,9 @@ TestPageLoader.queueTest("button-test", function(testPage) {
                 testButton(test.buttonbutton, "button button");
             });
 
-            it("fires a 'hold' event when the button is pressed for a long time", function() {
+            it("fires a 'longAction' event when the button is pressed for a long time", function() {
                 var el = test.inputbutton.element;
-                var holdListener = testPage.addListener(test.inputbutton, null, "hold");
+                var holdListener = testPage.addListener(test.inputbutton, null, "longAction");
                 var actionListener = testPage.addListener(test.inputbutton, null, "action");
 
                 testPage.mouseEvent({target: el}, "mousedown");
